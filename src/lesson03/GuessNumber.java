@@ -6,13 +6,13 @@ public class GuessNumber {
 
     static int i = 0;
     public static void main(String[] args) {
-        int result = (int) (Math.random() * 1000000 + 1);
+        final int result = (int) (Math.random() * 1000000 + 1);
 
         guessNumber(result);
     }
 
 
-    public static void guessNumber(int r) {
+    private static void guessNumber(int r) {
 //        System.out.println(++i);
         System.out.println("Введите число от 1 до 100:");
         Scanner scanner = new Scanner(System.in);
