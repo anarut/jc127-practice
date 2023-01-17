@@ -1,5 +1,11 @@
 package lesson08.animals;
 
+import lesson09.Alica;
+import lesson09.Robot;
+import lesson09.Speakable;
+
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -40,8 +46,17 @@ public class Main {
             if (animal instanceof Human human) {
                 human.think();
             }
-
-
         }
+
+
+        Robot robot = new Robot();
+        Alica alica = new Alica();
+
+        Speakable[] all = {dog, robot, cat, parrot, alica, human1};
+
+        for (Speakable s : all) {
+            s.voice();
+        }
+
     }
 }

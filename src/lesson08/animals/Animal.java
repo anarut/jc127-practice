@@ -1,6 +1,9 @@
 package lesson08.animals;
 
-public abstract class Animal {
+import lesson09.Eatable;
+import lesson09.Speakable;
+
+public abstract class Animal implements Speakable, Eatable {
 
     private int age;
     private int size;
