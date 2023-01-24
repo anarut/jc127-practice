@@ -1,9 +1,11 @@
 package lesson10;
 
+import java.time.DayOfWeek;
+
 public class Main {
 
     public static void main(String[] args) {
-
+        DayOfWeek monday = DayOfWeek.MONDAY;
     }
 
     class A { }
@@ -26,6 +28,7 @@ public class Main {
             // flowers
             return 0;
         }
+
 
     }
 }
