@@ -17,7 +17,6 @@ public class QueueMain {
 
     }
 
-
     private static void todo(Deque<String> objects) {
         objects.push("Minsk");
         objects.push("Brest");
