@@ -17,9 +17,9 @@ public class Main {
             || (symbol >= 'а' && symbol <= 'я') || (symbol >= 'А' && symbol <= 'Я')) {
                 if (map.containsKey(symbol)) {
                     Integer currentValue = map.get(symbol);
-//                    map.put(symbol, currentValue + 1);
+                    map.put(symbol, currentValue + 1);
                 } else {
-                    map.put(symbol, new Random().nextBoolean() ? 10 : 5);
+                    map.put(symbol, 1);
                 }
             }
         }
@@ -33,9 +33,7 @@ public class Main {
                 max = entry.getKey();
             }
         }
-
         System.out.println(max);
-
         Map<String, List<Integer>> map3;
     }
 }
