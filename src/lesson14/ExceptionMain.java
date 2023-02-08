@@ -54,10 +54,11 @@ public class ExceptionMain {
             countries.add("Sweden");
             countries.add("Finland");
             String s = countries.get(15);
+            throw new RuntimeException();
         } finally {
             System.out.println("TRY-CATCH end");
         }
 
-        System.out.println("REAL END");
+//        System.out.println("REAL END");
     }
 }
