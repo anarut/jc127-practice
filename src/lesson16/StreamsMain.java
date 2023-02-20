@@ -40,6 +40,8 @@ public class StreamsMain {
             }
             return result;
             //sfdfgdsf
+
+            //fdsugfusdfsd
         });
         IntStream intStream = integerStream.mapToInt(Integer::intValue);
         OptionalInt max = intStream.max();
