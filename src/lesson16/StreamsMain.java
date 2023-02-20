@@ -39,6 +39,7 @@ public class StreamsMain {
                 result += e.getSalary();
             }
             return result;
+            //sfdfgdsf
         });
         IntStream intStream = integerStream.mapToInt(Integer::intValue);
         OptionalInt max = intStream.max();
