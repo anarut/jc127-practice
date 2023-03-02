@@ -1,15 +1,17 @@
-package lesson22.pattern;
+package lesson22.pattern.command;
 
 import lesson22.Singleton;
-import lesson22.pattern.command.Command;
-import lesson22.pattern.command.ChangeColorLightCommand;
-import lesson22.pattern.command.LightOffCommand;
-import lesson22.pattern.command.LightOnCommand;
-import lesson22.pattern.command.UnknownCommand;
+import lesson22.pattern.Color;
+import lesson22.pattern.CommandType;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class CommandFactory {
 
     private static volatile CommandFactory instance;
+
+    private Map<CommandType, Integer> countByType = new HashMap<>();
 
     private CommandFactory() {
     }
@@ -27,7 +29,11 @@ public class CommandFactory {
 
     public Command getCommand(CommandType commandType) {
         return switch (commandType) {
-            case LIGHT_ON -> new LightOnCommand();
+            case LIGHT_ON -> {
+                final Integer current = countByType.getOrDefault(commandType, 0);
+                countByType.put(commandType, current + 1);
+                yield new LightOnCommand();
+            }
             case LIGHT_OFF -> new LightOffCommand();
             case CHANGE_COLOR_TO_DEFAULT -> new ChangeColorLightCommand(Color.DEFAULT);
             case CHANGE_COLOR_TO_RED -> new ChangeColorLightCommand(Color.RED);
@@ -35,4 +41,15 @@ public class CommandFactory {
             default -> new UnknownCommand();
         };
     }
+
+    public long getCountByType(CommandType commandType) {
+        return countByType.get(commandType);
+    }
+
+    public long getAllCount() {
+        return countByType.values()
+                .stream()
+                .count();
+    }
+
 }

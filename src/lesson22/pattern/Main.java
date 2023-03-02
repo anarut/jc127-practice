@@ -1,6 +1,7 @@
 package lesson22.pattern;
 
 import lesson22.pattern.command.Command;
+import lesson22.pattern.command.CommandFactory;
 
 public class Main {
 
