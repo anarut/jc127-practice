@@ -1,5 +1,7 @@
 package lesson12;
 
+import lesson20.ThreadLocalEx;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
