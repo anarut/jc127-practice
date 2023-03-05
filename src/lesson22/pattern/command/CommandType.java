@@ -1,4 +1,4 @@
-package lesson22.pattern;
+package lesson22.pattern.command;
 
 public enum CommandType {
     LIGHT_ON,

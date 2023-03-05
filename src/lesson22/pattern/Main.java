@@ -2,10 +2,13 @@ package lesson22.pattern;
 
 import lesson22.pattern.command.Command;
 import lesson22.pattern.command.CommandFactory;
+import lesson22.pattern.command.CommandType;
 
 public class Main {
 
     public static void main(String[] args) {
+        //read file config.txt
+
         CommandFactory factory = CommandFactory.getInstance();
         Command lightOn = factory.getCommand(CommandType.LIGHT_ON);
         Command lightOff = factory.getCommand(CommandType.LIGHT_OFF);

@@ -2,7 +2,6 @@ package lesson22.pattern.command;
 
 import lesson22.Singleton;
 import lesson22.pattern.Color;
-import lesson22.pattern.CommandType;
 
 import java.util.HashMap;
 import java.util.Map;
